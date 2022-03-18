@@ -1,0 +1,36 @@
+<div class="keyboard">
+  <div class="line1">
+    <input type="button" class="button" #btnQ value="q" (click)="send(btnQ.value)" (window:keydown.q)="send(btnQ.value)">
+    <input type="button" class="button" #btnW value="w" (click)="send(btnW.value)" (window:keydown.w)="send(btnW.value)">
+    <input type="button" class="button" #btnE value="e" (click)="send(btnE.value)" (window:keydown.e)="send(btnE.value)">
+    <input type="button" class="button" #btnR value="r" (click)="send(btnR.value)" (window:keydown.r)="send(btnR.value)">
+    <input type="button" class="button" #btnT value="t" (click)="send(btnT.value)" (window:keydown.t)="send(btnT.value)">
+    <input type="button" class="button" #btnY value="y" (click)="send(btnY.value)" (window:keydown.y)="send(btnY.value)">
+    <input type="button" class="button" #btnU value="u" (click)="send(btnU.value)" (window:keydown.u)="send(btnU.value)">
+    <input type="button" class="button" #btnI value="i" (click)="send(btnI.value)" (window:keydown.i)="send(btnI.value)">
+    <input type="button" class="button" #btnO value="o" (click)="send(btnO.value)" (window:keydown.o)="send(btnO.value)">
+    <input type="button" class="button" #btnP value="p" (click)="send(btnP.value)" (window:keydown.p)="send(btnP.value)">
+  </div>
+  <div class="line2">
+    <input type="button" class="button" #btnA value="a" (click)="send(btnA.value)" (window:keydown.a)="send(btnA.value)">
+    <input type="button" class="button" #btnS value="s" (click)="send(btnS.value)" (window:keydown.s)="send(btnS.value)">
+    <input type="button" class="button" #btnD value="d" (click)="send(btnD.value)" (window:keydown.d)="send(btnD.value)">
+    <input type="button" class="button" #btnF value="f" (click)="send(btnF.value)" (window:keydown.f)="send(btnF.value)">
+    <input type="button" class="button" #btnG value="g" (click)="send(btnG.value)" (window:keydown.g)="send(btnG.value)">
+    <input type="button" class="button" #btnH value="h" (click)="send(btnH.value)" (window:keydown.h)="send(btnH.value)">
+    <input type="button" class="button" #btnJ value="j" (click)="send(btnJ.value)" (window:keydown.j)="send(btnJ.value)">
+    <input type="button" class="button" #btnK value="k" (click)="send(btnK.value)" (window:keydown.k)="send(btnK.value)">
+    <input type="button" class="button" #btnL value="l" (click)="send(btnL.value)" (window:keydown.l)="send(btnL.value)">
+    <button class="button-del" (click)="del()" (window:keydown.backspace)="del()"><i class="fas fa-backspace"></i></button>
+  </div>
+  <div class="line3">
+    <input type="button" class="button" #btnZ value="z" (click)="send(btnZ.value)" (window:keydown.z)="send(btnZ.value)">
+    <input type="button" class="button" #btnX value="x" (click)="send(btnX.value)" (window:keydown.x)="send(btnX.value)">
+    <input type="button" class="button" #btnC value="c" (click)="send(btnC.value)" (window:keydown.c)="send(btnC.value)">
+    <input type="button" class="button" #btnV value="v" (click)="send(btnV.value)" (window:keydown.v)="send(btnV.value)">
+    <input type="button" class="button" #btnB value="b" (click)="send(btnB.value)" (window:keydown.b)="send(btnB.value)">
+    <input type="button" class="button" #btnN value="n" (click)="send(btnN.value)" (window:keydown.n)="send(btnN.value)">
+    <input type="button" class="button" #btnM value="m" (click)="send(btnM.value)" (window:keydown.m)="send(btnM.value)">
+    <input type="button" class="button-send" (click)="Enter()" (window:keydown.enter)="Enter()" value="ENTER">
+  </div>
+</div>
