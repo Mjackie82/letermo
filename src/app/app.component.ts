@@ -9,11 +9,12 @@ export class AppComponent {
   title = 'Letermo';
 
   // var to generate a rows
-  generateRows = ['','','','','','']
+  generateRows:string[] = ['','','','','','']
 
+  // game var
+  answer:string = 'PINTO';
+  isGameOver:boolean = false
 
-  //
-  answer = 'PINTO';
 
   words = [
     ['','','','',''],
@@ -54,15 +55,23 @@ export class AppComponent {
   }
 
   EnterWord(){
-    let tile = document.getElementById('row' + this.currentRow + 'Box5')!;
     if(this.currentBox == 6){
       const word = this.words[this.currentRow-1].join('')
 
       if(word === this.answer){
-        this.showMessage('Ala o cara, acertou msm, Parabéns :)')
+        this.showMessage('Deveras legal!')
+        this.isGameOver = true;
+        return
       }else{
-        this.currentRow++;
-        this.currentBox = 1;
+        if(this.currentRow < 6){
+          this.currentRow++;
+          this.currentBox = 1;
+        }
+        else if(this.currentRow >= 6){
+          this.showMessage('É o fim, filhote! ;-;')
+
+        }
+
       }
     }else{
       this.error();
@@ -71,7 +80,16 @@ export class AppComponent {
   }
 
   showMessage(message:string){
-    console.log(message)
+
+    const messageDisplay:Element = document.querySelector('.message-container')!;
+    const messageElement = document.createElement('p');
+
+    messageElement.textContent = message;
+    messageElement.style.cssText = "margin:0;background-color:grey;color:white;padding:10px;border-radius:10px;";
+    messageDisplay.append(messageElement);
+
+    setTimeout(() => messageDisplay.removeChild(messageElement), 2000)
+
 
   }
 

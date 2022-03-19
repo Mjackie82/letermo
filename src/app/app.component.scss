@@ -2,6 +2,7 @@ h1{
   text-align: center;
   font-size: 48px;
   font-weight: bold;
+  margin-top: 20px;
 }
 
 .row{
@@ -37,4 +38,13 @@ h1{
   100%{transform: translateX(-10px);}
 
 
+}
+
+.message-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 38px;
+  margin: 20px 0 20px 0;
 }
